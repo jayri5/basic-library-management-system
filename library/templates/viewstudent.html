@@ -1,0 +1,41 @@
+
+<html>
+  <head>
+
+  </head>
+  <body>
+    
+    <h3>Students in college</h3>
+{% if students%}
+
+  <table>
+    <thead>
+    <tr>
+    <th>Student Name</th>
+    <th>enrollment</th>
+    <th>branch</th>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+    <td colspan="4" rowspan="4">
+    </td>
+    </tr>
+    </tfoot>
+    <tbody>
+      {% for st in students %}
+        <tr>
+          <td>{{st.name}}</td>
+          <td>{{st.enrollment}}</td>
+          <td>{{st.branch}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
+</div>
+{%else%}
+<h1>0 students</h1>
+{%endif%}
+<a href="student_pdf">view student reports</a><br>
+  </body>
+</html>

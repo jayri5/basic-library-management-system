@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello</title>
+</head>
+<body>
+
+{% if obj %}
+    <h3>List of books authored by {{authorname}}</h3>
+    <ol>
+    {% for emp in obj %}
+      <li>Book name = {{emp.name}}</li>
+      <!--
+      <li>Book ISBN = {{emp.isbn}}</li>
+      <li>Book category = {{emp.category}}</li>
+      <li>Book count in library = {{emp.count}}</li>
+      -->
+    {% endfor %}
+  </ol>
+  {% else %}
+    <h3>Not a valid department</h3>
+  {% endif %}
+</body>
+</html>

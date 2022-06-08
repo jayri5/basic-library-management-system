@@ -1,0 +1,48 @@
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h3 >Issued books to Student</h3>
+
+{% if li%}
+    
+      <table >
+        <thead>
+        <tr>
+        <th>Student Name</th>
+        <th>Enrollment</th>
+        <th>Book Name</th>
+        <th>Author</th>
+        <th>Issued</th>
+        <th>Expiry Date</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+        <td colspan="70">
+        <div class="links"></div>
+        </td>
+        </tr>
+        </tfoot>
+        <tbody>
+          {% for t in li %}
+            <tr>
+              <td>{{t.0}}</td>
+              <td>{{t.1}}</td>
+              <td>{{t.2}}</td>
+              <td>{{t.3}}</td>
+              <td>{{t.4}}</td>
+              <td>{{t.5}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+        </table>
+    {%else%}
+    <h1> 0 book Issued</h1>
+    {%endif%}
+<a href="issuedbook_pdf">view issued book reports</a><br>
+<a href="monthlyissuedbook_pdf">view issued book reports by month</a><br>    
+  </body>
+</html>

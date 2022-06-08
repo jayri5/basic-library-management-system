@@ -1,0 +1,55 @@
+
+<html>
+<head></head>
+<title>HOME PAGE</title>
+
+<body>
+<center>
+<!--<a href="venue_pdf">view pdf</a><br>-->
+<a href="book/upload">upload pdf</a><br>
+Options for admin <br><br>
+<a href="addbook">add books </a> <br><br>
+<a href="viewbook">view books </a> <br><br>
+<a href="addstudent">add student </a> <br><br>
+<a href="viewstudent">view students </a> <br><br>
+<a href="issuebook">Issue book </a> <br><br>
+<a href="viewissuedbook">View Issued books </a> <br><br>
+<form action="deletebook" method="get">
+        <h3> Enter book Name to be deleted: </h3><br>
+        <input type="text" name="name" placeholder="Enter book Name"><br>
+        <input type="submit" value="Submit">
+</form>
+<form action="deletestudent" method="get">
+        <h3> Enter Student Name to be deleted: </h3><br>
+        <input type="text" name="name" placeholder="Enter student Name"><br>
+        <input type="submit" value="Submit">
+</form>
+
+<form action="searchbook" method="get">
+        <h3> Enter Author name whose books are to be searched: </h3><br>
+        <input type="text" name="name" placeholder="Enter author Name"><br>
+        <input type="submit" value="Submit">
+</form>
+
+<form action="searchstudent" method="get">
+        <h3> Enter book ISBN to see which students issued it: </h3><br>
+        <input type="text" name="name" placeholder="Enter book Name"><br>
+        <input type="submit" value="Submit">
+</form>
+
+<form action="findcopies" method="get">
+        <h3> Enter book name to show how many copies are present in library: </h3><br>
+        <input type="text" name="name" placeholder="Enter book Name"><br>
+        <input type="submit" value="Submit">
+</form>      
+
+
+{% for post in allPost %}
+Name: {{ post.name }}
+Book1: {{ post.book1 }}  
+Book2: {{ post.book2 }} 
+
+{% endfor %}
+
+</body>
+</html>
